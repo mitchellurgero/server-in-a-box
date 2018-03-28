@@ -4,10 +4,10 @@ Server-in-a-box (SIAB) is a heavily modified fork of Mail-in-a-box. It is not su
 
 ### The following features are planned to be included (Checked features are already in)
 
-- [ ] Webmin
-- [ ] LXC
-- [ ] LXC Web Panel
-- [ ] Shellinabox
+- [x] Webmin
+- [x] LXC
+- [x] LXC Web Panel
+- [x] Shellinabox
 
 ### New ports to consider
 

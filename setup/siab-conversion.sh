@@ -22,7 +22,7 @@ echo "Checking if LWP is installed..."
 if [ ! -f /usr/bin/lwp ]; then
 	echo "Installing lwp..."
 	curl -s https://packagecloud.io/install/repositories/claudyus/LXC-Web-Panel/script.deb.sh | sudo bash
-	sed -i 's/xenial/trusty/g' /etc/apt/sources.list.d/claudyus_LXC-Web-Panel.list
+	#sed -i 's/xenial/trusty/g' /etc/apt/sources.list.d/claudyus_LXC-Web-Panel.list
 	hide_output apt-get update
 	apt_install lwp
 	cp /etc/lwp/lwp.example.conf /etc/lwp/lwp.conf
