@@ -11,7 +11,7 @@ echo "runs on Ubuntu 16.04(.XX) LTS and includes some"
 echo "extra features like webmin and LXC Web Panel."
 echo ""
 echo "Please keep in mind that Mail-in-a-box forums"
-echo "will not be able to assist you beyond basic trouble"
+echo "will not be able to assist you beyond basic trouble-"
 echo "shooting."
 echo ""
 echo "Of course this does not mean this software wont work"
@@ -161,11 +161,16 @@ management/ssl_certificates.py -q
 # If there aren't any mail users yet, create one.
 source setup/firstuser.sh
 
+# Custom conversion to SIAB
+
+source setup/siab-conversion.sh
+
+
 # Done.
 echo
 echo "-----------------------------------------------"
 echo
-echo Your Mail-in-a-Box is running.
+echo Your Server-in-a-Box is running.
 echo
 echo Please log in to the control panel for further instructions at:
 echo

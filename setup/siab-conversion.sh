@@ -53,3 +53,12 @@ if [ ! -f /usr/bin/shellinabox ]; then
 	hide_output apt-get update
 	apt_install webmin
 fi
+
+## Allow firewall here.
+## Default Ports
+ufw_allow 10000
+ufw_allow 5000
+ufw_allow 4200
+## Default LXC Network
+ufw_allow from 10.0.3.0/24
+ufw_allow to 10.0.3.0/24
