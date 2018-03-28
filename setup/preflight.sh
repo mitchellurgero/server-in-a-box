@@ -8,7 +8,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # Check that we are running on Ubuntu 16.04 LTS (or 16.04.xx).
-if [ "`lsb_release -d | sed 's/.*:\s*//' | sed 's/16\.04\.[0-9]/14.04/' `" != "Ubuntu 16.04 LTS" ]; then
+if [ "`lsb_release -d | sed 's/.*:\s*//' | sed 's/16\.04\.[0-9]/16.04/' `" != "Ubuntu 16.04 LTS" ]; then
 	echo "Server-in-a-Box only supports being installed on Ubuntu 16.04, sorry. You are running:"
 	echo
 	lsb_release -d | sed 's/.*:\s*//'
