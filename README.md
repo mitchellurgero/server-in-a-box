@@ -1,8 +1,21 @@
 # Server-in-a-box
 
+Server-in-a-box (SIAB) is a heavily modified fork of Mail-in-a-box. It is not supported by [@JoshData](https://github.com/JoshData), [Mail-in-a-box contributors](https://github.com/mail-in-a-box/mailinabox/graphs/contributors), or Mail-in-a-box Forums.
 
+### The following features are planned to be included (Checked features are already in)
 
+- [ ] Webmin
+- [ ] LXC
+- [ ] LXC Web Panel
+- [ ] Shellinabox
 
+### New ports to consider
+
+The following ports are now open on MIAB and should be considered before installing, or configuring a firewall to forward to them:
+
+- 5000 is for LXC web panel. Should *NOT* be internet facing.
+- 10000 is for Webmin. Can be internet facing but it is recommended that it is *NOT*.
+- 4200 is for Shellinabox. Can be internet facing but it is recommended that it is *NOT*.
 
 ## ORIGINAL README:
 
