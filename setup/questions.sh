@@ -17,7 +17,7 @@ if [ -z "$NONINTERACTIVE" ]; then
 	# so we install the python package globally.
 	hide_output pip3 install "email_validator>=1.0.0" || exit 1
 
-	message_box "Mail-in-a-Box Installation" \
+	message_box "Server-in-a-Box Installation" \
 		"Hello and thanks for deploying a Mail-in-a-Box!
 		\n\nI'm going to ask you a few questions.
 		\n\nTo change your answers later, just run 'sudo mailinabox' from the command line.

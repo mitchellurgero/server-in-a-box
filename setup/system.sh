@@ -339,4 +339,5 @@ cp -f conf/fail2ban/filter.d/* /etc/fail2ban/filter.d/
 # Roundcube for the first time. This causes fail2ban to fail to start. Later
 # scripts will ensure the files exist and then fail2ban is given another
 # restart at the very end of setup.
+touch /var/log/mail.log
 restart_service fail2ban
