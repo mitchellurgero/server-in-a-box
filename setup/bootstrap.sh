@@ -6,6 +6,13 @@
 #
 #########################################################
 
+# Forego bootstrap. Not needed here.
+# Start setup script.
+setup/start.sh
+
+## Don't continue after start is done.
+exit 0
+
 if [ -z "$TAG" ]; then
 	TAG=v0.26c
 fi

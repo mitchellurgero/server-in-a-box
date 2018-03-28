@@ -2,6 +2,33 @@
 # This is the entry point for configuring the system.
 #####################################################
 
+## Add notice that although this is Mail-in-a-box, this is a heavily modified, unsupported version.
+
+echo "This is Server-in-a-box."
+echo ""
+echo "A heavily modified version of Mail-in-a-box that"
+echo "runs on Ubuntu 16.04(.XX) LTS and includes some"
+echo "extra features like webmin and LXC Web Panel."
+echo ""
+echo "Please keep in mind that Mail-in-a-box forums"
+echo "will not be able to assist you beyond basic trouble"
+echo "shooting."
+echo ""
+echo "Of course this does not mean this software wont work"
+echo "for you. Just keep in mind this is alpha-like software."
+echo ""
+echo ""
+
+echo -n "Would you like to continue with the install? (y/n)? "
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+    echo "OK - Begin install NOW"
+else
+	echo "Cancel install NOW"
+    exit 1
+fi
+
+
 source setup/functions.sh # load our functions
 
 # Check system setup: Are we running as root on Ubuntu 14.04 on a

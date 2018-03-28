@@ -7,9 +7,9 @@ if [[ $EUID -ne 0 ]]; then
 	exit
 fi
 
-# Check that we are running on Ubuntu 14.04 LTS (or 14.04.xx).
-if [ "`lsb_release -d | sed 's/.*:\s*//' | sed 's/14\.04\.[0-9]/14.04/' `" != "Ubuntu 14.04 LTS" ]; then
-	echo "Mail-in-a-Box only supports being installed on Ubuntu 14.04, sorry. You are running:"
+# Check that we are running on Ubuntu 16.04 LTS (or 16.04.xx).
+if [ "`lsb_release -d | sed 's/.*:\s*//' | sed 's/16\.04\.[0-9]/14.04/' `" != "Ubuntu 16.04 LTS" ]; then
+	echo "Server-in-a-Box only supports being installed on Ubuntu 16.04, sorry. You are running:"
 	echo
 	lsb_release -d | sed 's/.*:\s*//'
 	echo
@@ -36,20 +36,20 @@ if [ ! -d /vagrant ]; then
 fi
 fi
 if [ $TOTAL_PHYSICAL_MEM -lt 750000 ]; then
-	echo "WARNING: Your Mail-in-a-Box has less than 768 MB of memory."
+	echo "WARNING: Your Server-in-a-Box has less than 768 MB of memory."
 	echo "         It might run unreliably when under heavy load."
 fi
 
 # Check that tempfs is mounted with exec
 MOUNTED_TMP_AS_NO_EXEC=$(grep "/tmp.*noexec" /proc/mounts)
 if [ -n "$MOUNTED_TMP_AS_NO_EXEC" ]; then
-	echo "Mail-in-a-Box has to have exec rights on /tmp, please mount /tmp with exec"
+	echo "Server-in-a-Box has to have exec rights on /tmp, please mount /tmp with exec"
 	exit
 fi
 
 # Check that no .wgetrc exists
 if [ -e ~/.wgetrc ]; then
-	echo "Mail-in-a-Box expects no overrides to wget defaults, ~/.wgetrc exists"
+	echo "Server-in-a-Box expects no overrides to wget defaults, ~/.wgetrc exists"
 	exit
 fi
 
@@ -61,7 +61,7 @@ fi
 ARCHITECTURE=$(uname -m)
 if [ "$ARCHITECTURE" != "x86_64" ] && [ "$ARCHITECTURE" != "i686" ]; then
 if [ -z "$ARM" ]; then
-	echo "Mail-in-a-Box only supports x86_64 or i686 and will not work on any other architecture, like ARM."
+	echo "Server-in-a-Box only supports x86_64 or i686 and will not work on any other architecture, like ARM."
 	echo "Your architecture is $ARCHITECTURE"
 	exit
 fi
