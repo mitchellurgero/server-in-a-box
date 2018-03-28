@@ -2,12 +2,16 @@
 
 Server-in-a-box (SIAB) is a heavily modified fork of Mail-in-a-box. It is not supported by [@JoshData](https://github.com/JoshData), [Mail-in-a-box contributors](https://github.com/mail-in-a-box/mailinabox/graphs/contributors), or Mail-in-a-box Forums.
 
+After Mail-in-a-box (MIAB) is fully installed siab-conversion.sh script will run on it's own (After you set MIAB admin password) and will do it's thing on it's own. you will see the usual after-install bits.
+Below are a few notes on this modification, what it includes, and other things as well.
+
 ### The following features are planned to be included (Checked features are already in)
 
 - [x] Webmin
 - [x] LXC
 - [x] LXC Web Panel
 - [x] Shellinabox
+- [ ] Upgrade to Ubuntu 16.04 (Unable to until I fix Fail2ban and OpenDKIM for Ubuntu 16.04)
 
 ### New ports to consider
 
@@ -16,6 +20,25 @@ The following ports are now open on SIAB and should be considered before install
 - 5000 is for LXC web panel. Should *NOT* be internet facing.
 - 10000 is for Webmin. Can be internet facing but it is recommended that it is *NOT*.
 - 4200 is for Shellinabox. Can be internet facing but it is recommended that it is *NOT*.
+
+### Installing
+(You need a static IP Address, firewall needs to be configured, etc, etc.)
+
+1. Clone this repo
+2. Run setup/start.sh (or bootstrap.sh)
+3. Follow on screen prompts
+4. Profit??
+
+
+### Notices
+
+- This is an unsupported modification of Mail-in-a-box.
+- the mods in this build may or may not be stable.
+- This is an AS-IS, USE AT YOUR OWN RISK, modification to Mail-in-a-box.
+- This might not always install properly. Always check that everything works as expected before deploying.
+
+
+--------------------------------
 
 ## ORIGINAL README:
 
