@@ -87,6 +87,9 @@ if [ ! -f /usr/bin/add-apt-repository ]; then
 fi
 
 hide_output add-apt-repository -y ppa:mail-in-a-box/ppa
+## Modify ppa source list for use with xenial:
+sed -i 's/xenial/trusty/g' /etc/apt/sources.list.d/mail-in-a-box-ubuntu-ppa-xenial.list
+
 
 # ### Update Packages
 
