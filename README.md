@@ -11,7 +11,7 @@ Server-in-a-box (SIAB) is a heavily modified fork of Mail-in-a-box. It is not su
 
 ### New ports to consider
 
-The following ports are now open on MIAB and should be considered before installing, or configuring a firewall to forward to them:
+The following ports are now open on SIAB and should be considered before installing, or configuring a firewall to forward to them:
 
 - 5000 is for LXC web panel. Should *NOT* be internet facing.
 - 10000 is for Webmin. Can be internet facing but it is recommended that it is *NOT*.
